@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "biome check src",
     "lint:fix": "biome check src --write",
+    "deps:check": "depcruise src/",
     "check-types": "tsc --noEmit --pretty && tsc --project ./tsconfig.json --noEmit --pretty",
     "e2e": "start-server-and-test dev http://localhost:3000 \"cypress open --e2e\"",
     "e2e:headless": "start-server-and-test dev http://localhost:3000 \"cypress run --e2e\"",
@@ -32,6 +33,7 @@
     "embla-carousel-react": "^8.3.0",
     "lucide-react": "^0.453.0",
     "next": "^15.0.1",
+    "next-auth": "^5.0.0-beta.25",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -55,6 +57,7 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "cypress": "^13.15.1",
+    "dependency-cruiser": "^16.5.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "postcss": "^8.4.47",

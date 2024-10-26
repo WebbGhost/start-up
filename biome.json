@@ -1,14 +1,11 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "formatter": { "indentStyle": "space" },
   "organizeImports": { "enabled": true },
-
-  "formatter": {
-    "indentStyle": "space"
-  },
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
+      "recommended": false,
       "a11y": {
         "noAriaUnsupportedElements": "warn",
         "noBlankTarget": "off",
@@ -24,19 +21,19 @@
       "correctness": {
         "noChildrenProp": "error",
         "noPrecisionLoss": "error",
+        "noUnusedImports": "error",
         "noUnusedVariables": "error",
         "useArrayLiterals": "off",
         "useExhaustiveDependencies": "warn",
         "useHookAtTopLevel": "error",
-        "useJsxKeyInIterable": "error",
-        "noUnusedImports": "error"
+        "useJsxKeyInIterable": "error"
       },
       "nursery": {
-        "useSortedClasses": {
+        "noRestrictedImports": {
           "level": "error",
-          "fix": "safe",
-          "options": {}
-        }
+          "options": { "paths": { "react": "error", "react-dom": "error" } }
+        },
+        "useSortedClasses": { "level": "error", "fix": "safe", "options": {} }
       },
       "security": { "noDangerouslySetInnerHtmlWithChildren": "error" },
       "style": { "noNamespace": "error", "useAsConstAssertion": "error" },
